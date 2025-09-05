@@ -81,6 +81,8 @@ fn copy_winfsp_dll(winfsp_lib: &str) {
             e
         );
     }
+
+    println!("cargo:rerun-if-env-changed=WINFSP_DLL_OUTPUT_PATH");
 }
 
 fn main() {
